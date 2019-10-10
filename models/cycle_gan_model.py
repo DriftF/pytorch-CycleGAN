@@ -108,7 +108,8 @@ class CycleGANModel(BaseModel):
         self.real_A = input['A' if AtoB else 'B'].to(self.device)
         self.real_B = input['B' if AtoB else 'A'].to(self.device)
         self.image_paths = input['A_paths' if AtoB else 'B_paths']
-
+    
+    # 添加生成随机噪声
     def get_z_random(self, batch_size, nz, random_type='gauss'):
         if random_type == 'uni':
             z = torch.rand(batch_size, nz) * 2.0 - 1.0
