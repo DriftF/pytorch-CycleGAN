@@ -1,0 +1,1 @@
+python train.py --dataroot ./datasets/facades/train --name facades_cyclegan --model cycle_gan

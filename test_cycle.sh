@@ -1,0 +1,1 @@
+python test.py --dataroot ./datasets/facades/test --name facades_cyclegan --model cycle_gan
